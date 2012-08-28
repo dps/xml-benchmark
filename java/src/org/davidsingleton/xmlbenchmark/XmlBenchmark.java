@@ -11,17 +11,14 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
 /**
+ * Main class for the Java XML parsing benchmark.
+ * 
  * @author davidsingleton
- *
  */
 public class XmlBenchmark {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		if (args.length != 2) {
 			System.out.println("Usage: XmlBenchmark [inputFile] [outputFile]");

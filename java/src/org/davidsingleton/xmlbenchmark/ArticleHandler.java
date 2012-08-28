@@ -2,6 +2,7 @@ package org.davidsingleton.xmlbenchmark;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -17,8 +18,10 @@ public class ArticleHandler extends DefaultHandler {
 
 	public ArticleHandler(String outputFilePath) {
 		try {
-	    outPrintStream = new PrintStream(outputFilePath);
+	    outPrintStream = new PrintStream(outputFilePath, "utf-8");
     } catch (FileNotFoundException e) {
+	    e.printStackTrace();
+    } catch (UnsupportedEncodingException e) {
 	    e.printStackTrace();
     }
   }
